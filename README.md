@@ -18,6 +18,16 @@ This is super bad for many reasons - mainly because changes you haven't intended
 
 If you wish to add an untracked file, specify the file exactly: `git add mynewfile.py -p`
 
+### How do I commit like a pro?
+
+`git commit -v` 
+
+Use this and ONLY this. (No `git commit -a` bullshit that is as terrible as `git add .`)
+
+The `-v` flag means verbose, and this prints out a full summary of the commit below where you enter the commit message. This is super useful because you get another chance to review it (first when you write the code, second when you stage the changes line by line using `git add -p`), and you can catch any embarassing mistakes.
+
+This is *especially* important for merge commits, so that you can check that no merge conflicts have snuck in. If you manage to commit a merge conflict we will laugh at you forever.
+
 ### How do I switch branches or get rid of something?
 
 `git checkout branch` to switch branches. 
