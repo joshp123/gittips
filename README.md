@@ -1,7 +1,7 @@
 # gittips
 how do you do the funky gibbon?
 
-### HOW DO I ADD CHANGES?
+### How do I add changes?
 `git add -p`
 
 Always always always use git add -p to add your changes.
@@ -18,22 +18,46 @@ This is super bad for many reasons - mainly because changes you haven't intended
 
 If you wish to add an untracked file, specify the file exactly: `git add mynewfile.py -p`
 
+### How do I switch branches or get rid of something?
+
+`git checkout branch` to switch branches. 
+
+`git checkout` to reset your changes in a branch, for example if you had some bad 
+
+Add the `-f` flag to force a checkout, for example to discard changes when switching between branches.
+
+### How do I make a new branch?
+
+`git checkout -b "newbranch"`
 
 
+### If you have made some changes and aren't ready to commit them yet:
+`git stash save "describe your changes"` to save
 
-git checkout (f)
-git commit -v
-git stash
-git checkout -b "newbranch"
+`git stash pop` to apply the last stashed changes
 
-HOW DO I PUSH WITHOUT FUCKING UP DEVELOP
-git push origin branchname
+`git stash show` and `git stash apply {1}` to apply a specific stashed change.
 
-HELP I FUCKED UP WHAT DO
-git reset --hard HEAD (^)
+
+### How do I merge changes properly?
+`git fetch && git merge --no-commit --no-ff -s recursive -X patience -X ignore-space-change origin/develop` 
+
+This fetches changes and then merges the branch origin/develop in to your local branch. You then need to commit to finish the merge. ALWAYS ALWAYS ALWAYS fix merge conflicts first if there are any. 
+
+
+### How do I push without fucking up other branches?
+`git push origin branchname`.
+
+This pushes ONLY the specified branch, which means if you were an idiot and commited to develop, then nobody will ever know, because you didn't push there. If you use `git push` it pushes all branches you have locally which is bad.
+
+## HELP I FUCKED UP WHAT DO
+`git reset --hard HEAD` to reset your changes to the last commit
+
+`git reset --hard HEAD^` to reset your changes to the *previous* commit (if, for example, you accidentally commited to develop and want to revert that commit). Add more `^`s to go back futher.
+
 Whatever you do, DON'T PUSH, because then you change everyone elses branches too and have to revert stuff and it's generally awful.
 
 
-I HAVE NO IDEA WHAT IN THE GODDAMNED HELL I AM DOING PLEASE HELP
+## I HAVE NO IDEA WHAT IN THE GODDAMNED HELL I AM DOING PLEASE HELP
 read this all of this all of it then read it twenty more times and tattoo it on your arms
 !!!! http://nvie.com/posts/a-successful-git-branching-model/ !!! 
