@@ -60,7 +60,7 @@ This fetches changes and then merges the branch origin/develop in to your local 
 
 This pushes ONLY the specified branch, which means if you were an idiot and commited to develop, then nobody will ever know, because you didn't push there. If you use `git push` it pushes all branches you have locally which is bad.
 
-## HELP I FUCKED UP WHAT DO
+## Help I fucked up what do
 `git reset --hard HEAD` to reset your changes to the last commit
 
 `git reset --hard HEAD^` to reset your changes to the *previous* commit (if, for example, you accidentally commited to develop and want to revert that commit). Add more `^`s to go back futher.
@@ -70,4 +70,7 @@ Whatever you do, DON'T PUSH, because then you change everyone elses branches too
 
 ## I HAVE NO IDEA WHAT IN THE GODDAMNED HELL I AM DOING PLEASE HELP
 read this all of this all of it then read it twenty more times and tattoo it on your arms
+
 !!!! http://nvie.com/posts/a-successful-git-branching-model/ !!! 
+
+tl;dr never ever ever ever commit to develop or master or you will be fetching coffee for people for ages.
