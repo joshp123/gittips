@@ -71,6 +71,12 @@ Whatever you do, DON'T PUSH, because then you change everyone elses branches too
 ## I HAVE NO IDEA WHAT IN THE GODDAMNED HELL I AM DOING PLEASE HELP
 read this all of this all of it then read it twenty more times and tattoo it on your arms
 
+For branching that resembles our workflow:
+
 !!!! http://nvie.com/posts/a-successful-git-branching-model/ !!! 
 
-tl;dr never ever ever ever commit to develop or master or you will be fetching coffee for people for ages.
+Git documentation in general:
+
+http://git-scm.com/docs/
+
+tl;dr never ever ever ever commit to develop or master or you will be fetching coffee for people for ages and you will rtfm'ed the rest of your life.
