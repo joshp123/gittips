@@ -37,8 +37,10 @@ This is *especially* important for merge commits, so that you can check that no 
 Add the `-f` flag to force a checkout, for example to discard changes when switching between branches.
 
 ### How do I make a new branch?
+`git fetch`
+`git checkout -b "newbranch" origin/startpoint`
 
-`git checkout -b "newbranch"`
+By fetching from the remote server and passing a starting point you make sure that you have an up to date branch. Bonus points for being explicit about which branch to start from, this prevents accidentally branching from the wrong branch.
 
 
 ### If you have made some changes and aren't ready to commit them yet:
