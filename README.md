@@ -4,7 +4,7 @@ how do you do the funky gibbon?
 ### How do I add changes?
 `git add -p`
 
-Always always always use `git add -p to add your changes.
+Always always always use `git add -p` to add your changes.
 **Never** use `git add .`, if you do so you are literally worse than hitler and you're gonna regret it.
 
 *Why?*
