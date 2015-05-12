@@ -32,13 +32,17 @@ This is *especially* important for merge commits, so that you can check that no 
 
 `git checkout branch` to switch branches. 
 
-`git checkout` to reset your changes in a branch, for example if you had some bad 
+`git checkout` to reset your changes in a branch, for example if you had some bad stuff in your working tree.
 
 Add the `-f` flag to force a checkout, for example to discard changes when switching between branches.
 
+You can also do `git checkout myfile.py` to checkout just one file.
+
 ### How do I make a new branch?
 
-`git checkout -b "newbranch"`
+`git checkout -b "newbranch"` This makes a new branch from the current working tree.
+
+If you want to make a new branch from another branch and you're not currently on it (e.g. create a new branch from master and you're checked out to some_featurebranch), then you can use `git checkout -b newbranch oldbranch`.
 
 
 ### If you have made some changes and aren't ready to commit them yet:
@@ -54,6 +58,8 @@ Add the `-f` flag to force a checkout, for example to discard changes when switc
 
 This fetches changes and then merges the branch origin/develop in to your local branch. You then need to commit to finish the merge. ALWAYS ALWAYS ALWAYS fix merge conflicts first if there are any. 
 
+**NB** If you're coding in a language that is whitespace sensitive, e.g. python, remove the `-X ignore-space-change`:
+`git merge --no-commit --no-ff -s recursive -X patience origin/develop`
 
 ### How do I push without fucking up other branches?
 `git push origin branchname`.
@@ -74,3 +80,12 @@ read this all of this all of it then read it twenty more times and tattoo it on 
 !!!! http://nvie.com/posts/a-successful-git-branching-model/ !!! 
 
 tl;dr never ever ever ever commit to develop or master or you will be fetching coffee for people for ages.
+
+# Other stuff that might be useful:
+git diff
+
+git rm to remove or if you are Michiel git add -u - adds deleted files to the commit
+
+git commit --amend - to amend a commit if you fucked up. DONT DO IT AFTER PUSHING!!!!!
+
+
