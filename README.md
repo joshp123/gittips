@@ -59,6 +59,7 @@ If you want to make a new branch from another branch and you're not currently on
 This fetches changes and then merges the branch origin/develop in to your local branch. You then need to commit to finish the merge. ALWAYS ALWAYS ALWAYS fix merge conflicts first if there are any. 
 
 **NB** If you're coding in a language that is whitespace sensitive, e.g. python, remove the `-X ignore-space-change`:
+
 `git merge --no-commit --no-ff -s recursive -X patience origin/develop`
 
 ### How do I push without fucking up other branches?
