@@ -42,7 +42,7 @@ You can also do `git checkout myfile.py` to checkout just one file.
 
 `git checkout -b "newbranch"` This makes a new branch from the current working tree.
 
-If you want to make a new branch from another branch and you're not currently on it (e.g. create a new branch from master and you're checked out to some_featurebranch), then you can use `git checkout -b newbranch oldbranch`.
+~~~If you want to make a new branch from another branch and you're not currently on it (e.g. create a new branch from master and you're checked out to some_featurebranch), then you can use~~~ ~~~`git checkout -b newbranch oldbranch`.~~~~~
 
 
 ### If you have made some changes and aren't ready to commit them yet:
